@@ -1,0 +1,60 @@
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+body {
+    background: black;
+    color: white;
+
+}
+
+span {
+    font-weight: bold;
+}
+
+.bigbox {
+    position: center;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.sideBoxL {
+    flex-basis: 50%;
+    border: solid white;
+    margin: 5px;
+    padding: 5px;
+
+
+}
+
+.sideBoxR {
+    display: inline-block;
+    width: 250px;
+    border: solid white;
+    margin: 5px;
+    padding: 5px;
+    height: 120px
+}
+
+/*.center {*/
+
+/*    width: 100%;*/
+/*    border: solid white;*/
+/*    text-align: center;*/
+/*}*/
+.center{
+    position: center;
+    display: block;
+    width: 500px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid white;
+}

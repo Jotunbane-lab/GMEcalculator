@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>STONKS</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div class="bigbox">
+    <div class="image"><img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/GameStop-film-700x300.jpg">
+    </div>
+
+    <div class="sideBoxR">
+
+        <p> Ilość akcji: <span th:text="${myGmeStocks.getAmount()}"></span></p>
+        <p> Cena Akcji: <span th:text="${myGmeStocks.getUsdPrice()}"></span>USD</p>
+        <p> Suma kupna: <span th:text="${myGmeStocks.getUsdSum()}"></span>USD</p>
+
+    </div>
+    <div class="sideBoxR">
+
+        <p> Aktualna cena: <span th:text="${importedData.getUsdPrice()}"></span>USD</p>
+        <p> Aktualna wartość: <span th:text="${importedData.getUsdPrice()}*${myGmeStocks.getAmount()}"></span>USD</p>
+        <p> Wartość w złówkach: <span th:text="${plnValues.getPlnGmeValue()}"></span>PLN</p>
+
+    </div>
+
+    <div class="center">
+        <p>Wartość Dolara : <span th:text="${importedData.getUsdValue()}"></span>PLN <br/></p>
+        <p>Podatek : <span th:text="${plnValues.getPlnTax()}"></span>PLN <br/></p>
+        <p>Zysk : <span th:text="${plnValues.getPlnFinalSum()}"></span>PLN <br/></p>
+        <p>Suma : <span th:text="${plnValues.getMegaStonks()}"></span>PLN <br/></p>
+
+        <p><button onClick="window.location.reload();">Refresh Page</button></p>
+
+    </div>
+</div>
+</body>
+</html>
